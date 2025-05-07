@@ -51,7 +51,7 @@ export class UsersController {
   }
 
   @UseGuards(JwtAuthGuard, RolesGuard)
-  // @Roles(UserRole.ADMIN, UserRole.USER)
+  @Roles(UserRole.ADMIN, UserRole.USER)
   @ApiBearerAuth()
   @Get()
   @ApiOperation({ summary: 'Get all users' })
